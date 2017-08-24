@@ -7,7 +7,9 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 	<!-- 元素允许在主配置文件之外提供一个properties格式对应文件，从而使得主配置文件更加通用。这样对部署非常有用  -->
 	 <properties resource="mysql.properties" /> 
 	<!-- 设置别名，一定要放在properties下面  -->
-	
+	<typeAliases>
+	<typeAlias type="com.mucfc.model.Bank" alias="Bank"/>
+	</typeAliases>
 	<!-- 配置数据源相关的信息  -->
 	<environments default="development">
 		<environment id="development">
@@ -29,4 +31,6 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 		 <mapper resource="com/mucfc/model/bank.xml" /> 
 		<!-- bank -->
 	</mappers>
+	
+	
 </configuration>

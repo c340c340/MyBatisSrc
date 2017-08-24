@@ -10,6 +10,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
+import com.mucfc.model.Bank;
 import com.mucfc.model.BankMapper;
 
 
@@ -21,7 +22,8 @@ public class Main {
 		SqlSession sqlSesion = sqlSessionFactory.openSession();
 		BankMapper bankMapper = sqlSesion.getMapper(BankMapper.class);
 		HashMap<String, Object> map = new HashMap<String, Object>();
-//		bankMapper.findEmployeerByID(map );
+		map.put("uuid", "2");
+		Bank bank = bankMapper.findEmployeerByID(map );
 	}
 
 }

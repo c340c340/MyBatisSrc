@@ -1,14 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
- <mapper namespace="com.mucfc.model.BankMapperw">
+ <mapper namespace="com.mucfc.model.BankMapper">
  	
- 	<resultMap type="" id="">
- 
- 	</resultMap>
+ 	
+	<resultMap type="Bank" id="bankMap">
+		<result property="name" column="F_BANK_NAME"/>
+	</resultMap>
+	
      <!-- 查找 -->
-     <select id="findEmployeerByID" parameterType="HashMap" resultType="HashMap">
-     select* from `t_employeer` where employeer_id =#{employeer_id}
+     <select id="findEmployeerByID" parameterType="HashMap" resultType="Bank">
+     select* from TSEPAY_BANK_INFO where F_UUID =#{uuid}
+     <if test="id != ''">
+     	and 1=1
+     </if>
+    
      </select>
      
   
