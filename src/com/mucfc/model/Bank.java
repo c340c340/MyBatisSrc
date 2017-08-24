@@ -1,6 +1,7 @@
 package com.mucfc.model;
 
 public class Bank {
+
 	private String name;
 
 	public String getName() {
@@ -11,5 +12,5 @@ public class Bank {
 		this.name = name;
 	}
 	
-	
+
 }
